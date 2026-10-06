@@ -1,90 +1,105 @@
-# Inserimento dei dati
+# Creo una lista vuota
+lista = []
 
+
+# Inserimento dati
 nome = input("Inserisci il nome: ")
 
 eta = int(input("Inserisci l'età: "))
 
 sesso = input("Inserisci il sesso M/F: ")
 
-premium = input("Sei premium? si/no: ")
+premium = input("Sei premium Si/No: ")
 
 
-# Controllo nome
+# Controllo dei dati inseriti
 if nome == "":
-    print("Errore: il nome non può essere vuoto")
+    print("Errore! Il nome non può essere vuoto")
 
-# Controllo sesso (char = un solo carattere)
+elif eta <= 0:
+    print("Errore! Età non valida")
+
 elif len(sesso) != 1:
-    print("Errore: il sesso deve essere un solo carattere")
+    print("Errore! Il sesso deve essere un solo carattere")
 
-# Controllo premium
-elif premium != "si" and premium != "no":
-    print("Errore: devi inserire si oppure no")
+elif premium != "Si" and premium != "No":
+    print("Errore! Devi inserire Si oppure No")
 
 else:
 
-    # Trasformo premium in bool
-    if premium == "si":
+    # Converto premium in booleano
+    if premium == "Si":
         premium = True
     else:
         premium = False
 
 
-    # Creo la lista
-    lista = [nome, eta, sesso, premium]
+    # Inserisco i dati nella lista vuota
+    lista.append(nome)
+    lista.append(eta)
+    lista.append(sesso)
+    lista.append(premium)
 
-    print(lista)
+
+    # Visualizzo la lista
+    print("Lista:", lista)
 
 
-    # Chiedo cosa modificare
+    # Chiedo quale dato modificare
     print("1 - Nome")
     print("2 - Età")
     print("3 - Sesso")
     print("4 - Premium")
 
-    scelta = int(input("Cosa vuoi modificare? "))
+    scelta = input("Quale dato vuoi modificare? ")
 
 
+    # Modifica del dato scelto
     match scelta:
 
-        case 1:
+        case "1":
             nome = input("Inserisci il nuovo nome: ")
 
-            if nome != "":
+            if nome == "":
+                print("Errore! Il nome non può essere vuoto")
+            else:
                 lista[0] = nome
-            else:
-                print("Errore: nome vuoto")
 
 
-        case 2:
+        case "2":
             eta = int(input("Inserisci la nuova età: "))
-            lista[1] = eta
 
-
-        case 3:
-            sesso = input("Inserisci il nuovo sesso: ")
-
-            if len(sesso) == 1:
-                lista[2] = sesso
+            if eta <= 0:
+                print("Errore! Età non valida")
             else:
-                print("Errore: deve essere un solo carattere")
+                lista[1] = eta
 
 
-        case 4:
-            premium = input("Sei premium? si/no: ")
+        case "3":
+            sesso = input("Inserisci il nuovo sesso M/F: ")
 
-            if premium == "si":
+            if len(sesso) != 1:
+                print("Errore! Il sesso deve essere un solo carattere")
+            else:
+                lista[2] = sesso
+
+
+        case "4":
+            premium = input("Sei premium Si/No: ")
+
+            if premium == "Si":
                 lista[3] = True
 
-            elif premium == "no":
+            elif premium == "No":
                 lista[3] = False
 
             else:
-                print("Errore: inserisci si oppure no")
+                print("Errore! Devi inserire Si oppure No")
 
 
         case _:
             print("Scelta non valida")
 
 
+    # Visualizzo la lista dopo la modifica
     print("Lista finale:", lista)
