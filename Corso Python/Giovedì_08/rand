@@ -1,0 +1,57 @@
+# Importiamo il modulo random, che ci permette di generare numeri casuali.
+import random
+
+
+# Definiamo una funzione chiamata "indovina".
+    # Il parametro "a" rappresenta il numero che bisogna indovinare.
+    # Se non viene passato nessun valore, "a" vale 0.
+def indovina(a=0):
+    
+     # Chiediamo all'utente di inserire un numero.
+    numero= int(input("Inserisci un numero da 1 a 100:"))
+    
+    # Controlliamo se il numero inserito dall'utente
+    # è uguale al numero da indovinare.
+    if numero==a:
+        print("Hai indovinato!")
+         # Se i due numeri sono uguali, stampiamo il messaggio.
+        return True
+    # La funzione restituisce True, indicando che il numero
+        # è stato indovinato.
+    
+    # Se il numero inserito è minore del numero da indovinare...
+    elif numero <a:
+        print("Il numero da indovinare è più alto")
+        # Comunichiamo all'utente che deve provare con un numero più alto.
+        
+    else:
+         # Se non è né uguale né minore, significa che è maggiore.
+        print("Il numero da indovinare è più basso")
+        # Comunichiamo all'utente che deve provare con un numero più basso.
+        
+        
+    return False
+    # Se arriviamo qui significa che il numero non è stato indovinato.
+    # La funzione restituisce quindi False.
+
+#Generiamo il numero casuale
+NumeroDaIndovinare= random.randint(1,100)
+# Generiamo casualmente un numero intero compreso tra 1 e 100.
+while True:
+    
+    indovinato = indovina(NumeroDaIndovinare)
+    # Chiamiamo la funzione indovina() e le passiamo
+    # il numero casuale generato precedentemente.
+    # Il risultato True o False viene salvato nella variabile "indovinato".
+    
+    if indovinato == True:
+         # Controlliamo se l'utente ha indovinato il numero.
+        break
+    # Se indovinato è True, interrompiamo il ciclo while.
+    
+    scelta= input("Vuoi rigiocare?")
+     # Se l'utente non ha indovinato, chiediamo se vuole continuare a giocare.
+    
+    if scelta == "no":
+        # Controlliamo se l'utente ha risposto "no".
+        break
