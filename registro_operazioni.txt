@@ -1,0 +1,8 @@
+1. CREAZIONE MATRICE (3x3):
+[[98 91 20]
+ [33  4 73]
+ [23 13 65]]
+
+2. SOTTO-MATRICE CENTRALE:
+[[4]]
+
