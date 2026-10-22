@@ -1,0 +1,11 @@
+Nome,Eta,Citta,Tipo_Abbonamento,Attivo,Fascia_Eta
+Marco,22.0,Roma,Base,False,Adulto
+Giulia,28.0,Milano,Premium,True,Adulto
+Luca,34.44444444444444,Napoli,Family,True,Adulto
+Sara,45.0,Torino,Base,False,Senior
+Matteo,52.0,Roma,Premium,True,Senior
+Elena,16.0,Milano,Family,True,Junior
+Davide,33.0,Napoli,Base,False,Adulto
+Chiara,29.0,Torino,Premium,True,Adulto
+Alessandro,61.0,Roma,Family,True,Senior
+Francesca,24.0,Milano,Base,False,Adulto

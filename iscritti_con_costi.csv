@@ -1,0 +1,11 @@
+Nome,Eta,Citta,Tipo_Abbonamento,Attivo,Fascia_Eta,Costo_Mensile,Costo_Annuale
+Marco,22.0,Roma,Base,False,Adulto,40,480
+Giulia,28.0,Milano,Premium,True,Adulto,70,840
+Luca,34.44444444444444,Napoli,Family,True,Adulto,100,1200
+Sara,45.0,Torino,Base,False,Senior,40,480
+Matteo,52.0,Roma,Premium,True,Senior,70,840
+Elena,16.0,Milano,Family,True,Junior,100,1200
+Davide,33.0,Napoli,Base,False,Adulto,40,480
+Chiara,29.0,Torino,Premium,True,Adulto,70,840
+Alessandro,61.0,Roma,Family,True,Senior,100,1200
+Francesca,24.0,Milano,Base,False,Adulto,40,480
